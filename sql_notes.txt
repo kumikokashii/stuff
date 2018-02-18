@@ -1,0 +1,51 @@
+SQL NOTES:
+
+When using UNION, you can use LIMIT only for the whole, not for each part
+
+Use self join to get all combinations
+
+COUNT(*) is the number of rows. COUNT(col_name) is the number of NON-NULL values in col_name
+
+Apostrophe escape > double it up (‘’)
+
+Average is AVG, not AVE
+
+Use DATEDIFF(a_date, b_date) for num of days. b_date - a_date, NOT THE OTHER WAY AROUND
+
+HAVING must come BEFORE ORDER BY
+
+DISTINCT to de-dupe
+
+LIMIT needs to be followed by an int. No functions like FLOOR to find mid-point
+
+You can use JOIN with BETWEEN in the ON
+
+XOR for exclusive OR (one or the other, but not both)
+
+MOD(a, b) is a % b
+
+POWER(a, b) is a ** b
+
+CHAR_LENGTH(text) is # of chars
+
+LEFT(text , 10)
+
+LOWER(text) to make it lowercase
+
+There's no IF. Use
+CASE (indicates if elif else starts)
+  WHEN ..... THEN .....
+  WHEN ..... THEN .....
+  ELSE .....
+END
+
+COALESCE(a, b, …)takes the first value that’s not NULL
+
+CONCAT(text1, text2, ...)
+
+MySQL has no FULL OUTER JOIN. Only INNER, LEFT, RIGHT
+
+Trick with CASE-END. When counting, use it with THEN 1 and ELSE 0.
+
+Every derived table must have its own alias
+
