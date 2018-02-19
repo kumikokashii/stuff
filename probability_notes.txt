@@ -1,0 +1,26 @@
+PROBABILITY NOTES:
+
+===========================================
+Independent probability
+===========================================
+* The first event happening does not impact the probability of the second event
+* P(A and B) = P(A) * P(B)
+* If P(A) = P(A|B), then A and B are independent
+
+===========================================
+Dependent probability
+===========================================
+* The first event happening impacts the probability of the second event
+* P(A and B) = P(A) * P(B|A) = P(B) * P(A|B)
+* If P(A) != P(A|B), then A and B are dependent
+
+===========================================
+Permutations (Ways things can be arranged)
+===========================================
+* P(n, r) = n! / (n - r)!
+* 0! = 1
+
+===========================================
+Combinations (Order doesn't matter)
+===========================================
+* C(n, r) = n! / ((n - r)! x r!)
