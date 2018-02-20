@@ -54,7 +54,7 @@ Confidence Level and Interval (Margin or Error)
 ===========================================
 * Example: 'With 95% confidence level, x is between 5 and 10 (sample size 100)' means that 
 when this experiment is repeated with different sets of samples (of the same smaple size 100), 
-95% of the times the intervals (that are different every time) will contain x.
+95% of the times the intervals (that are different every time) will contain true x.
 
 1. Pick n samples from population (ofen, we want to guess population mean)
 2. We find that sample mean is p (chance of the 'success' event happening is (p * 100)%)
