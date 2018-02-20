@@ -1,0 +1,63 @@
+STATS NOTES:
+
+===========================================
+Binomial Distribution
+===========================================
+* n independent observations
+
+* Each observation is Bernoulli Distribution
+  * 'success' (1) or 'failure' (0)
+  * Probability of success is p
+  * Mean = (p * 1) + ((1 - p) * 0) = p
+  * Variance = p(1 - p)
+
+* Written B(n, p)
+* Mean = np
+* Variance = np(1 - p)
+
+* Sampling distribution
+  * First sampling (picking random n from population) gives the value of B_1(n, p)
+  * Then the proportion of 'success' is B_1(n, p) / n
+  * Continue sampling...
+  
+  * Then sampling distribution (distribution of the proportion of 'success' from various samples) has:
+    * Mean = p
+    * Variance = p(1 - p)/n
+    * Rule of thumb: If np >= 10 and n(1 - p) >= 10, then normal distribution
+
+===========================================
+Central Limit Theorem
+===========================================
+* Sampling distributin of sample mean (where sample size n is large enough, like 30) is a normal distribution with the same mean. Populatin distribution can be of any shape (not normal distribution). If mean_obs and variance_obs are from population distribution where samples are picked from, then sampling distribution has:
+  * Mean = mean_obs
+  * Variance = variance_obs / n
+  
+* Example: https://www.methodsconsultants.com/tutorial/the-central-limit-theorem-and-its-implications-for-statistical-inference/
+
+===========================================
+Hypothesis Testing
+===========================================
+1. Your sample has a value of x from hypothesis A
+2. Assume the null hypothesis (NOT hypothesis A) to be true
+3. Then given the distribution based on the null hypothesis, find the probability of x happening: p-value (probability value)
+4. Assumption is that the possibility x happening is larger than the significance level (usually 5% or less)
+5. If p-value < significance level, a contradiction. Reject the null hypothesis. Hypothesis A is valid.
+
+* If sample size is small (like less than 30), use t-score rather than z-socre
+
+===========================================
+Confidence Level and Interval (Margin or Error)
+===========================================
+* Example: 'With 95% confidence level that x is between 5 and 10 (sample size 100)' means that when this experiment is repeated by taking 100 samples from population, 95% of the times x will be between 5 and 10.
+
+1. Pick n samples from population. Say this has p(%) of an observation happening.
+2. Sampling distribution is a normal distribution. So there's a 95% chance that p is within 2 standard deviations of the population mean
+3. In other words, there's a 95% chance that the population mean is within 2 standard deviations of p
+4. You don't know the standard deviation of the population. Instead use Standard Error = se, which is a standard deviation of the samples
+5. There's a 95% chance (95% of the times if repeated) that the population mean (often what you are predicting) is within (p - 2*se, p + 2*se)
+
+* Use t-score (degree of freedom = n - 1) instead of z-score when population standard deviation is unknown or n < 30
+
+* Samples need to be randomly picked
+* Need greater than or 10 successes and failures each, and n >= 30, or samples are picked from normal distribution (Normal Condition)
+* Sample size needs to be less than 10% of population size (Independence Condition)
