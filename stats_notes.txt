@@ -72,3 +72,26 @@ Standard Error = sample standard deviation * (1 / n) ^ (1 / 2) = se
 * Samples need to be randomly picked
 * Need n >= 30, or samples are picked from (or resemble) normal distribution (Normal Condition)
 * Sample size needs to be less than 10% of population size (Independence Condition)
+
+===========================================
+Comparing two samples, difference between the two populations
+===========================================
+* Population A: pop_mean_A, pop_var_A
+* Population B: pop_mean_B, pop_var_B
+* Sample A (size n) from population A: sample_mean_A, sample_var_A
+* Sample B (size m) from population B: sample_mean_B, sample_var_B
+
+* Sampling distribution of sample_mean_A: sd_mean_A = pop_mean_A, sd_var_A = pop_var_A / n
+* Sampling distribution of sample_mean_B: sd_mean_B = pop_mean_B, sd_var_B = pop_var_B / m
+
+* Sampling distribution of sample_mean_A - sample_mean_B:
+  mean = sd_mean_A - sd_mean_B = pop_mean_A - pop_mean_B
+  var = sd_var_A + sd_var_B = (pop_var_A / n) + (pop_var_B / m)
+
+* AB Testing: Assume the null hypothes (pop_mean_A - pop_mean_B = 0)
+* Estimate pop_var_A with sample_var_A, pop_var_B with sample_var_B (use t-score instead of z-score)
+* https://conductrics.com/pvalues
+
+
+
+
