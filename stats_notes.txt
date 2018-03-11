@@ -92,6 +92,37 @@ Comparing two samples, difference between the two populations
 * Estimate pop_var_A with sample_var_A, pop_var_B with sample_var_B (use t-score instead of z-score)
 * https://conductrics.com/pvalues
 
+===========================================
+Sample size for AB testing
+===========================================
+* alpha i.e. type 1 error i.e. significance level (i.e. false positive rate) often 5%
+  = P(positive hypothesis | negative results)
+  
+  false positive (i.e. false alarm)
+  = null hypothesis is rejected, but null hypothesis is true
 
+  reliability (i.e. specificity)
+  = 1 - alpha
+  = P(negative hypothesis | negative results)
+  = true negative rate
+  = Set an assumption that (reliability * 100)% of the times, null hypothesis is true
+    i.e. there's a sample mean s.t. beyond this sample mean, null hypothesis is no longer true
+  
+* beta i.e. type 2 error (i.e. falset negative rate)
+  = P(negative hypothesis | positive results)
 
+  false negative (i.e. failure to detect)
+  = null hypothesis is accepted, but null hypothesis is not true
 
+  power (i.e. sensitivity) often 80%
+  = 1 - beta
+  = P(positive hypothesis | positive results)
+  = true positive rate
+  = chance to reject null hypothesis correctly
+    i.e. if the test is repeated, (power * 100)% of times, null hypothesis is rejected
+  
+* When running an AB test,
+to get a statistically significan result with a reliability of 95% (significance level = 5%),
+and power of 80%,
+given hypothesis A's sample mean being x, hypothesis A's sample variance being y,
+find the minimum sample size n.
