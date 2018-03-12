@@ -120,9 +120,48 @@ Sample size for AB testing
   = true positive rate
   = chance to reject null hypothesis correctly
     i.e. if the test is repeated, (power * 100)% of times, null hypothesis is rejected
+    
+* Let n be unknown sample size, sig be significance level, power be power
+  Let group A be an alternative group with: mean_A, var_A = mean_A(1 - mean_A) / n
+  Let group B be a population group with: mean_B, var_B = mean_B(1 - mean_B) / n
+  Find n
   
-* When running an AB test,
-to get a statistically significan result with a reliability of 95% (significance level = 5%),
-and power of 80%,
-given hypothesis A's sample mean being x, hypothesis A's sample variance being y,
-find the minimum sample size n.
+  Null hypothesis (Assume no difference b/w group A and group B):
+    Let A_null(x) denote area under null hypothesis sample distribution curve up to x
+    null_mean = mean_A - mean_B = 0
+    null_var = var_A + var_B
+    Let x_rel be sample mean value s.t. A_null(x_rel) = reliability = 1 - sig
+    
+  Hypothesis A (Assume there's difference b/w group A and group B):
+    Let A_diff(x) denote area under hypothesis A's sample distribution curve up to x
+    diff_mean = mean_A - mean_B
+    diff_var = var_A + var_B
+    Let x_power be sample mean value s.t. A_diff(x_power) = power
+    
+  We are given x_rel = x_power by definition of the test
+  
+  Look at Hypothesis A's sampling distribution
+    Let z_power be z-score of x_power
+    z_power = (diff_mean - x_power) / (diff_var) ** (1 / 2)
+            = (diff_mean - x_rel) / (diff_var) ** (1 / 2)
+            = [diff_mean / (diff_var) ** (1 / 2)] - [x_rel / (diff_var) ** (1 / 2)]  # 1
+                 
+  Look at null hypothesis's sampling distribution
+    Let z_rel be z-score of x_rel
+    z_rel = (x_rel - null_mean) / (null_var) ** (1 / 2)
+          = (x_rel - 0) / (diff_var) ** (1 / 2)
+          = x_rel / (diff_var) ** (1 / 2)  # 2
+               
+  From #1, 2,
+    z_power = [diff_mean / (diff_var) ** (1 / 2)] - z_rel
+            = [(mean_A - mean_B) / (var_A + var_B) ** (1 / 2)] - z_rel
+            = {(mean_A - mean_B) / [(mean_A(1 - mean_A) + mean_B(1 - mean_B)) / n] ** (1 / 2)} - z_rel
+    
+    Solve for n
+    
+    (mean_A - mean_B) / [(mean_A(1 - mean_A) + mean_B(1 - mean_B)) / n] ** (1 / 2) = z_power + z_rel
+    [n / (mean_A(1 - mean_A) + mean_B(1 - mean_B))] ** (1 / 2) = (z_power + z_rel) / (mean_A - mean_B)
+    n / [mean_A(1 - mean_A) + mean_B(1 - mean_B)] = [(z_power + z_rel) / (mean_A - mean_B)] ** 2
+    n = [mean_A(1 - mean_A) + mean_B(1 - mean_B)] * [(z_power + z_rel) / (mean_A - mean_B)] ** 2
+    
+    
