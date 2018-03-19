@@ -101,7 +101,7 @@ Sample size for AB testing
   false positive (i.e. false alarm)
   = null hypothesis is rejected, but null hypothesis is true
 
-  reliability (i.e. specificity)
+  reliability (i.e. confidence level i.e. specificity)
   = 1 - alpha
   = P(negative hypothesis | negative results)
   = true negative rate
@@ -119,8 +119,8 @@ Sample size for AB testing
   = P(positive hypothesis | positive results)
   = true positive rate
   = chance to reject null hypothesis correctly
-    i.e. if the test is repeated, (power * 100)% of times, null hypothesis is rejected
-    
+    i.e. if the test is repeated, (power * 100)% of times, effect will be flagged as statistically significant
+        
 * Let n be unknown sample size, sig be significance level, power be power
   Let group A be an alternative group with: mean_A, var_A = mean_A(1 - mean_A) / n
   Let group B be a population group with: mean_B, var_B = mean_B(1 - mean_B) / n
@@ -136,7 +136,7 @@ Sample size for AB testing
     Let A_diff(x) denote area under hypothesis A's sample distribution curve up to x
     diff_mean = mean_A - mean_B
     diff_var = var_A + var_B
-    Let x_power be sample mean value s.t. A_diff(x_power) = power
+    Let x_power be sample mean value s.t. 1 - A_diff(x_power) = power
     
   We are given x_rel = x_power by definition of the test
   
@@ -164,4 +164,15 @@ Sample size for AB testing
     n / [mean_A(1 - mean_A) + mean_B(1 - mean_B)] = [(z_power + z_rel) / (mean_A - mean_B)] ** 2
     n = [mean_A(1 - mean_A) + mean_B(1 - mean_B)] * [(z_power + z_rel) / (mean_A - mean_B)] ** 2
     
-    
+* Rough estimate of n with 5% significance level and 80% power:
+  1. Let var = var_A = var_B
+  2. z_rel = 1.644854
+  3. z_power = 0.841621
+  5. Let change_wanted = mean_A - mean_B
+  6. n = [mean_A(1 - mean_A) + mean_B(1 - mean_B)] * [(z_power + z_rel) / (mean_A - mean_B)] ** 2
+       = (var + var) * [(1.644854 + 0.841621) / change_wanted] ** 2
+       = (2 * var) * (2.486475) ** 2 / change_wanted ** 2
+       = 12.36511585125 * var / change_wanted ** 2
+  
+* 0.8 MDE (Minimal Detectable Effect): Given sample size and sample variance, the smallest effect size detectable at 80% power.
+
