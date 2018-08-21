@@ -47,5 +47,27 @@ MySQL has no FULL OUTER JOIN. Only INNER, LEFT, RIGHT
 
 Trick with CASE-END. When counting, use it with THEN 1 and ELSE 0.
 
+Get a percentage with no subqueries:
+SELECT
+  SUM(
+    CASE
+      WHEN color = "green" THEN 1
+      ELSE 0
+    END
+  ) / COUNT(*) * 100 AS perc_green
+FROM colors
+;
+
 Every derived table must have its own alias
 
+RANK() OVER(PARTITION BY ... ORDER BY ...) for numbering per group: 
+SELECT
+  client_id,
+  MONTH(request_at) AS month,
+  restaurant_id,
+  COUNT(*) AS rest_cnt
+  RANK() OVER(PARTITION BY client_id, month ORDER BY rest_cnt DESC) AS rank
+FROM trips
+WHERE rank = 1
+GROUP BY client_id, month, restaurant_id
+;
