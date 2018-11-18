@@ -24,11 +24,13 @@ def test3(c, year, month, day):
   d = date(int(year), int(month), int(day))
   d_index = d.weekday()
   d_name = day_name[d_index] 
+
   print('{} is {}'.format(d.strftime('%B %e, %Y'), d_name))
+  return d_name
 
 
 """
-How to call these functions
+How to call these functions?
 On command line, "invoke [function name]", e.g. "invoke test2"
 
 "invoke test1" output:
