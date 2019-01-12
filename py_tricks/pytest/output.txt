@@ -1,9 +1,27 @@
 ============================= test session starts ==============================
-platform darwin -- Python 3.5.4, pytest-4.1.0, py-1.7.0, pluggy-0.8.1
+platform darwin -- Python 3.5.4, pytest-4.1.0, py-1.7.0, pluggy-0.8.1 -- /Users/kumiko/anaconda/bin/python
+cachedir: .pytest_cache
 rootdir: /Users/kumiko/PythonGeneral/stuff/py_tricks/pytest, inifile:
-collected 2 items
+collecting ... collected 18 items
 
-test_one.py FF                                                           [100%]
+test_one.py::test_int_equal FAILED                                       [  5%]
+test_one.py::test_tuple_equal FAILED                                     [ 11%]
+test_one.py::test_addition_type_match PASSED                             [ 16%]
+test_one.py::test_lets_skip SKIPPED                                      [ 22%]
+test_one.py::test_this_should_fail xfail                                 [ 27%]
+test_one.py::test_this_will_pass XPASS                                   [ 33%]
+test_params.py::test_random_int_from_str_1[case0] PASSED                 [ 38%]
+test_params.py::test_random_int_from_str_1[case1] PASSED                 [ 44%]
+test_params.py::test_random_int_from_str_1[case2] PASSED                 [ 50%]
+test_params.py::test_random_int_from_str_1[case3] PASSED                 [ 55%]
+test_params.py::test_random_int_from_str_2[hohoho-106] PASSED            [ 61%]
+test_params.py::test_random_int_from_str_2[Halloween-75] PASSED          [ 66%]
+test_params.py::test_random_int_from_str_2[...-47] PASSED                [ 72%]
+test_params.py::test_random_int_from_str_2[Let's go 2019!-80] PASSED     [ 77%]
+test_params.py::test_random_int_from_str_3[hohoho-106] PASSED            [ 83%]
+test_params.py::test_random_int_from_str_3[Halloween-75] PASSED          [ 88%]
+test_params.py::test_random_int_from_str_3[...-47] PASSED                [ 94%]
+test_params.py::test_random_int_from_str_3[Let's go 2019!-80] PASSED     [100%]
 
 =================================== FAILURES ===================================
 ________________________________ test_int_equal ________________________________
@@ -14,15 +32,18 @@ ________________________________ test_int_equal ________________________________
 >     assert 3 == 31
 E     assert 3 == 31
 
-test_one.py:5: AssertionError
+test_one.py:7: AssertionError
 _______________________________ test_tuple_equal _______________________________
 
+    @pytest.mark.yumyum
     def test_tuple_equal():
       assert (2, 3, 5) == (2, 3, 5)
 >     assert (7, 11) == (31, 31)
 E     assert (7, 11) == (31, 31)
 E       At index 0 diff: 7 != 31
-E       Use -v to get the full diff
+E       Full diff:
+E       - (7, 11)
+E       + (31, 31)
 
-test_one.py:10: AssertionError
-=========================== 2 failed in 0.05 seconds ===========================
+test_one.py:13: AssertionError
+===== 2 failed, 13 passed, 1 skipped, 1 xfailed, 1 xpassed in 0.09 seconds =====

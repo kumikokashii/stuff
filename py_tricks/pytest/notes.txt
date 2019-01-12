@@ -1,0 +1,20 @@
+<< Commands >>
+pytest  # Run all i.e. all files starting with "test_" and all functions starting with "test_"
+
+pytest --collect-only  # See what will be picked up
+
+pytest -k "int"  # Only pick up test functions that contain "int"
+
+pytest -m yumyum  # Only pick up test functions tagged with @pytest.mark.yumyum
+
+
+<< Exception Testing >>
+To see if an exception is raised correctly, have the code inside "with pytest.raises(TypeError):". If it raises TypeError, success. If not, fail :)
+
+
+<< Built-in Tags >>
+- @pytest.mark.skip()  # Skipped for test
+- @pytest.mark.xfail()  # Excepcted to fail. If fails, marked with "xfail". If pass, "XPASS"
+
+Can add a condition in the (), for skipping, failing. For example, if the package's version is less than x, skip, or expected to fail. Otherwise, run as if no tag exists.
+
