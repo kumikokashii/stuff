@@ -2,28 +2,106 @@
 platform darwin -- Python 3.5.4, pytest-4.1.0, py-1.7.0, pluggy-0.8.1 -- /Users/kumiko/anaconda/bin/python
 cachedir: .pytest_cache
 rootdir: /Users/kumiko/PythonGeneral/stuff/py_tricks/pytest, inifile:
-collecting ... collected 18 items
+collecting ... collected 22 items
 
-test_one.py::test_int_equal FAILED                                       [  5%]
-test_one.py::test_tuple_equal FAILED                                     [ 11%]
-test_one.py::test_addition_type_match PASSED                             [ 16%]
-test_one.py::test_lets_skip SKIPPED                                      [ 22%]
-test_one.py::test_this_should_fail xfail                                 [ 27%]
-test_one.py::test_this_will_pass XPASS                                   [ 33%]
-test_params.py::test_random_int_from_str_1[case0] PASSED                 [ 38%]
-test_params.py::test_random_int_from_str_1[case1] PASSED                 [ 44%]
-test_params.py::test_random_int_from_str_1[case2] PASSED                 [ 50%]
-test_params.py::test_random_int_from_str_1[case3] PASSED                 [ 55%]
-test_params.py::test_random_int_from_str_2[hohoho-106] PASSED            [ 61%]
-test_params.py::test_random_int_from_str_2[Halloween-75] PASSED          [ 66%]
-test_params.py::test_random_int_from_str_2[...-47] PASSED                [ 72%]
-test_params.py::test_random_int_from_str_2[Let's go 2019!-80] PASSED     [ 77%]
-test_params.py::test_random_int_from_str_3[hohoho-106] PASSED            [ 83%]
-test_params.py::test_random_int_from_str_3[Halloween-75] PASSED          [ 88%]
-test_params.py::test_random_int_from_str_3[...-47] PASSED                [ 94%]
-test_params.py::test_random_int_from_str_3[Let's go 2019!-80] PASSED     [100%]
+test_fixtures.py::test_read_file 
+SETUP    S tmpdir_factory
+        SETUP    F tmpdir (fixtures used: tmpdir_factory)
+        SETUP    F make_a_file (fixtures used: tmpdir)
+        test_fixtures.py::test_read_file (fixtures used: make_a_file, tmpdir, tmpdir_factory)PASSED
+        TEARDOWN F make_a_file
+        TEARDOWN F tmpdir
+test_fixtures.py::test_read_int_list 
+        SETUP    F int_list
+        test_fixtures.py::test_read_int_list (fixtures used: int_list)FAILED
+        TEARDOWN F int_list
+test_fixtures.py::test_session_scope_func1 
+SETUP    S color_list
+        test_fixtures.py::test_session_scope_func1 (fixtures used: color_list)PASSED
+test_fixtures.py::test_session_scope_func2 
+        test_fixtures.py::test_session_scope_func2 (fixtures used: color_list)PASSED
+test_one.py::test_int_equal 
+        test_one.py::test_int_equalFAILED
+test_one.py::test_tuple_equal 
+        test_one.py::test_tuple_equalFAILED
+test_one.py::test_addition_type_match 
+        test_one.py::test_addition_type_matchPASSED
+test_one.py::test_lets_skip SKIPPED
+test_one.py::test_this_should_fail 
+        test_one.py::test_this_should_failxfail
+test_one.py::test_this_will_pass 
+        test_one.py::test_this_will_passXPASS
+test_params.py::test_random_int_from_str_1[case0] 
+        SETUP    F case[('hohoho', 106)]
+        test_params.py::test_random_int_from_str_1[case0] (fixtures used: case)PASSED
+        TEARDOWN F case[('hohoho', 106)]
+test_params.py::test_random_int_from_str_1[case1] 
+        SETUP    F case[('Halloween', 75)]
+        test_params.py::test_random_int_from_str_1[case1] (fixtures used: case)PASSED
+        TEARDOWN F case[('Halloween', 75)]
+test_params.py::test_random_int_from_str_1[case2] 
+        SETUP    F case[('...', 47)]
+        test_params.py::test_random_int_from_str_1[case2] (fixtures used: case)PASSED
+        TEARDOWN F case[('...', 47)]
+test_params.py::test_random_int_from_str_1[case3] 
+        SETUP    F case[("Let's go 2019!", 80)]
+        test_params.py::test_random_int_from_str_1[case3] (fixtures used: case)PASSED
+        TEARDOWN F case[("Let's go 2019!", 80)]
+test_params.py::test_random_int_from_str_2[hohoho-106] 
+        SETUP    F c_word[hohoho]
+        SETUP    F c_int[106]
+        test_params.py::test_random_int_from_str_2[hohoho-106] (fixtures used: c_int, c_word)PASSED
+        TEARDOWN F c_int[106]
+        TEARDOWN F c_word[hohoho]
+test_params.py::test_random_int_from_str_2[Halloween-75] 
+        SETUP    F c_word[Halloween]
+        SETUP    F c_int[75]
+        test_params.py::test_random_int_from_str_2[Halloween-75] (fixtures used: c_int, c_word)PASSED
+        TEARDOWN F c_int[75]
+        TEARDOWN F c_word[Halloween]
+test_params.py::test_random_int_from_str_2[...-47] 
+        SETUP    F c_word[...]
+        SETUP    F c_int[47]
+        test_params.py::test_random_int_from_str_2[...-47] (fixtures used: c_int, c_word)PASSED
+        TEARDOWN F c_int[47]
+        TEARDOWN F c_word[...]
+test_params.py::test_random_int_from_str_2[Let's go 2019!-80] 
+        SETUP    F c_word[Let's go 2019!]
+        SETUP    F c_int[80]
+        test_params.py::test_random_int_from_str_2[Let's go 2019!-80] (fixtures used: c_int, c_word)PASSED
+        TEARDOWN F c_int[80]
+        TEARDOWN F c_word[Let's go 2019!]
+test_params.py::test_random_int_from_str_3[hohoho-106] 
+        SETUP    F case[('hohoho', 106)]
+        test_params.py::test_random_int_from_str_3[hohoho-106] (fixtures used: case)PASSED
+        TEARDOWN F case[('hohoho', 106)]
+test_params.py::test_random_int_from_str_3[Halloween-75] 
+        SETUP    F case[('Halloween', 75)]
+        test_params.py::test_random_int_from_str_3[Halloween-75] (fixtures used: case)PASSED
+        TEARDOWN F case[('Halloween', 75)]
+test_params.py::test_random_int_from_str_3[...-47] 
+        SETUP    F case[('...', 47)]
+        test_params.py::test_random_int_from_str_3[...-47] (fixtures used: case)PASSED
+        TEARDOWN F case[('...', 47)]
+test_params.py::test_random_int_from_str_3[Let's go 2019!-80] 
+        SETUP    F case[("Let's go 2019!", 80)]
+        test_params.py::test_random_int_from_str_3[Let's go 2019!-80] (fixtures used: case)PASSED
+        TEARDOWN F case[("Let's go 2019!", 80)]
+TEARDOWN S color_list
+TEARDOWN S tmpdir_factory
 
 =================================== FAILURES ===================================
+______________________________ test_read_int_list ______________________________
+
+int_list = [9, 3, 5]
+
+    def test_read_int_list(int_list):
+      assert int_list[0] == 9
+      assert int_list[1] == 3
+>     assert int_list[2] == 6
+E     assert 5 == 6
+
+test_fixtures.py:16: AssertionError
 ________________________________ test_int_equal ________________________________
 
     def test_int_equal():
@@ -46,4 +124,4 @@ E       - (7, 11)
 E       + (31, 31)
 
 test_one.py:13: AssertionError
-===== 2 failed, 13 passed, 1 skipped, 1 xfailed, 1 xpassed in 0.09 seconds =====
+===== 3 failed, 16 passed, 1 skipped, 1 xfailed, 1 xpassed in 0.14 seconds =====
