@@ -28,4 +28,20 @@ foreach ($colors as $i=>$c) {
   echo "Index is $i. Value is $c.\n";
 }
 
+
+// strlen returns # of byte, not char
+// range, INCLUDES end value!!! start and end are required
+$hmm = '12345';
+echo strlen($hmm) . "\n";
+
+foreach(range(0, strlen($hmm)-1) as $i) {
+  echo $hmm[$i] . "---";
+}
+echo "\n";
+
+echo substr('opqrstu', 1, 3);  // 3 chars from position 1 of that str
+
+
+
 ?>
+
