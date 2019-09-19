@@ -42,6 +42,9 @@ echo "\n";
 echo substr('opqrstu', 1, 3);  // 3 chars from position 1 of that str
 
 
+// POD is like sqlalchemy. Can connect to diff. databases in same way
+// POD = PHP Data Objects
+
 
 ?>
 
