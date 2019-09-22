@@ -1,4 +1,5 @@
 <?php
+
 // https://phptherightway.com/pages/The-Basics.html
 
 // https://stackoverflow.com/questions/12410695/new-line-n-in-php-is-not-working/12411073
@@ -75,9 +76,6 @@ echo ($a == 3) ? 'yup' : 'no';
 
 // Shock: Variable declarations
 // bottom of https://phptherightway.com/pages/The-Basics.html
-
-
-
 
 
 ?>

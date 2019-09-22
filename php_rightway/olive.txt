@@ -1,0 +1,30 @@
+
+===========================
+Opcode Cache
+===========================
+php codes get complied into opcodes
+https://www.php.net/manual/en/internals2.opcodes.php
+
+"An opcode cache prevents redundant compilation by storing opcodes in memory and reusing them on successive calls. It will typically check signature or modification time of the file first, in case there have been any changes." by phptherightway.com
+
+
+===========================
+Object Caching
+===========================
+MemCached
+ex:
+  $m = new Memcached();
+  $m->addServer('localhost', 11211);
+  $value1 = $m->get("key1");
+  $m->set("key2", "yay");
+
+
+===========================
+CGI = Common Gateway Interface
+===========================
+https://en.wikipedia.org/wiki/Common_Gateway_Interface
+
+CGI program (like PHP, or can be Python, Pearl in old days, etc.) receives inputs from the web server, and then runs through a process, and returns a string of HTML to the web server. These are called request and response.
+
+
+
