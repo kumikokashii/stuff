@@ -1,7 +1,6 @@
 
 // ES6 Javascript Tutorial For Beginners | ES6 Crash Course
-// https://www.youtube.com/watch?v=WZQc7RUAg18
-
+// https://www.youtube.com/watch?v=WZQc7RUAg1A8
 
 // Constants. Can't be modified once set.
 // Other times, use let for variables. scope is within the bracket only.
@@ -40,10 +39,7 @@ const person = {
 document.write(person.likes + "<br />");
 
 
-// Arrow function. => ???
-
-
-// Default function parameters, same as python
+// Default function parameters
 function sleepy(n = 9) {
   let str = '';
   for (let i = 0; i < n; i++) {
@@ -58,16 +54,17 @@ sleepy(3);
 sleepy(11);
 
 
+// Arrow function: Like lambda func in python
+// https://zendev.com/2018/10/01/javascript-arrow-functions-how-why-when.html
+
 // forEach: Array method. forloop. and getting index
 list.forEach((x, index) => {
   document.write(`index is ${index}. value is ${x}.<br />`);
 });
 
-
 // map: Array method. Returns a new list from an existing list
 const newList = list.map(x => x + 100);
 document.write(newList + "<br />");
-
 
 // filter: Array method. Returns a filtered list
 const filteredList = list.filter(x => x > 2);
