@@ -1,0 +1,36 @@
+
+Resource:
+https://dev.to/dangolant/things-i-brushed-up-on-this-week-the-http-request-lifecycle-
+
+
+1. Browser receives a request. This request has a bunch of info:
+- "scheme"/protocol (e.g. http)
+- host (www.example.com),
+- optional port number
+- optional resource path
+- optional query strings that are specified in the form
+
+2. Find IP address from the domain name via UDP connection (= User Datagram Protocol connection)
+- DNS server (= Domain Name System server): Its job is to find the IP address. And that's it.
+- In command line, you can do it w/ nslookup. Enter domain name. Get IP addresses. You can enter the IP address in the browser's address bar to go to the website too ^_^
+- Also w/ nslookup, you can use another DNS server other than your computer's default. For example, enter "server 8.8.8.8" to switch to Google's DNS server.
+
+3. Browser sends an HTTP request via TCP connection (= Transmission Control Protocol connection)
+
+4. Server sends an HTTP response via TCP connection
+
+
+*TCP?*
+- A sequence number for every byte sent ensures full delivery of the message
+- Full duplex communication (both ways at the same time, like a phone)
+- Establish a connection w/ 3-way handshake w/ below steps:
+round | from   | to     | seq.# | what 
+1     | client | server | x     | SYN
+2     | server | client | x + 1 | ACK
+      | server | client | y     | SYN
+3     | client | server | y + 1 | ACK
+- Video on above: https://www.youtube.com/watch?v=LyDqA-dAPW4
+- When server sends response to cilent, the same thing of SYN and ACK happens to ensure full delivery.
+
+
+
