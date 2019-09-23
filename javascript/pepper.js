@@ -11,9 +11,12 @@ document.write(A + "<br />");
 // A = 2;  Error: Assignment to constant variable.
 
 const list = [1, 2, 3, 5];
+document.write("=========================<br />");
+document.write("List is:<br />");
 for (let i = 0; i < list.length; i++) {
-  document.write(i);
+  document.write(list[i] + "<br />");
 }
+document.write("=========================<br />");
 
 
 // document.write(i);  This is an error, i is not defined outside of the for-loop block
@@ -47,10 +50,28 @@ function sleepy(n = 9) {
     str += 'z';
   }
   str += '...';
-  document.write(str);
+  document.write(str + "<br />");
 }
 
 sleepy();
+sleepy(3);
+sleepy(11);
 
 
-//
+// forEach: Array method. forloop. and getting index
+list.forEach((x, index) => {
+  document.write(`index is ${index}. value is ${x}.<br />`);
+});
+
+
+// map: Array method. Returns a new list from an existing list
+const newList = list.map(x => x + 100);
+document.write(newList + "<br />");
+
+
+// filter: Array method. Returns a filtered list
+const filteredList = list.filter(x => x > 2);
+document.write(filteredList + "<br />")
+
+
+
