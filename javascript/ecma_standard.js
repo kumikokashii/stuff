@@ -32,6 +32,7 @@ document.write(`hohoho-. ${message} ${name}<br />`);
 
 
 // Dictinary/json obj
+// Keys are string only, and keys look like objects but they are strings
 const person = {
   name: 'X',
   likes: 'water'
