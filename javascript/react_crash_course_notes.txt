@@ -12,6 +12,7 @@ React is a View library, not a framework like Angular. It reacts to state change
 Setup
 ------------------------------------------------
 
+Install Node.js: brew install
 Install React: sudo npm i -g create-react-app@1.5.2
 
 Visual Studio Code w/ extentions
@@ -42,7 +43,7 @@ Bootstrap:
 - Add to index.js: import 'bootstrap/dist/css/bootstrap.css';
 
 In src, create a directory called components. Make a file per component.
-- Name componentName.jsx (instead of just .js). Use camelcase
+- Name componentName.jsx (jsx = JavaScriptXML. instead of just .js). Use camelcase
 - Import that class in index.js: import Counter from './components/counter';
 - Use it as <Counter />
 
@@ -57,7 +58,7 @@ state = {
 }
 ... and use it like: <span>{this.state.count}</span>,
 ... or formatCount() {
-	     return this.state.count === 0 ? 'Zero' : this.state.count;
+	   return this.state.count === 0 ? 'Zero' : this.state.count;
        }
 
 
