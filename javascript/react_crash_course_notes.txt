@@ -1,0 +1,35 @@
+================================================
+React Crash Course
+https://www.youtube.com/watch?v=Ke90Tje7VS0
+================================================
+
+DOM = Document Object Model
+- DOM elements are window, document, table, etc.
+
+React is a View library, not a framework like Angular. It reacts to state change, to update DOM, without directly updating DOM. Each component is a class with state and render method.
+
+------------------------------------------------
+Setup
+------------------------------------------------
+
+Install React: sudo npm i -g create-react-app@1.5.2
+
+Visual Studio Code w/ extentions
+- Simple React Snippets
+- Prettier, code reformatter
+
+------------------------------------------------
+First App
+------------------------------------------------
+
+Create a new app: create-react-app app-name (app-name can be anything)
+
+Compile and open it up in browser: npm start (from the new directory). go to localhost:3000 to see it
+
+App.js has components
+- Each component returns JSX
+- JSX = JavaScriptXML, looks like <h1>Hello<h1>
+- Babel compiles JSX into React
+
+
+
