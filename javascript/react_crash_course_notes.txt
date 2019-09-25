@@ -26,10 +26,23 @@ Create a new app: create-react-app app-name (app-name can be anything)
 
 Compile and open it up in browser: npm start (from the new directory). go to localhost:3000 to see it
 
-App.js has components
-- Each component returns JSX
+Each component's render method returns JSX
 - JSX = JavaScriptXML, looks like <h1>Hello<h1>
-- Babel compiles JSX into React
+- Babel compiles JSX via React. It does "React.create_element..."
+
+------------------------------------------------
+More
+------------------------------------------------
+
+Bootstrap:
+- "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation and other interface components."
+- Install bootstrap: npm i bootstrap@4.1.1
+- Add to index.js: import 'bootstrap/dist/css/bootstrap.css';
+
+In src, create a directory called components. Make a file per component.
+- Name componentName.jsx (instead of just .js). Use camelcase
+- Import that class in index.js: import Counter from './components/counter';
+- Use it as <Counter />
 
 
 
