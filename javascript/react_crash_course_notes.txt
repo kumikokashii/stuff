@@ -18,6 +18,8 @@ Visual Studio Code w/ extentions
 - Simple React Snippets
 - Prettier, code reformatter
 
+When I deleted local apps and cloned the Gihub repo, it didn't work until in each app dir, "npm install" was run.
+
 ------------------------------------------------
 First App
 ------------------------------------------------
@@ -28,7 +30,7 @@ Compile and open it up in browser: npm start (from the new directory). go to loc
 
 Each component's render method returns JSX
 - JSX = JavaScriptXML, looks like <h1>Hello<h1>
-- Babel compiles JSX via React. It does "React.create_element..."
+- Babel compiles JSX via React. It does "React.createElement(...)"
 
 ------------------------------------------------
 More
@@ -43,6 +45,20 @@ In src, create a directory called components. Make a file per component.
 - Name componentName.jsx (instead of just .js). Use camelcase
 - Import that class in index.js: import Counter from './components/counter';
 - Use it as <Counter />
+
+React.Fragment is when you don't wrap 2+ elements in <div></div>.
+
+For a component, sdynamic text:
+state = {
+  count: 0,
+  address: {
+    street: xyz
+  }
+}
+... and use it like: <span>{this.state.count}</span>,
+... or formatCount() {
+	     return this.state.count === 0 ? 'Zero' : this.state.count;
+       }
 
 
 
