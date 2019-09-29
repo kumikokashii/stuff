@@ -97,7 +97,9 @@ props can have a function. For example, to remove an element from a list where e
   let <button onClick={this.props.onDelete}>...
   ... whole has an event-handler like: handleDelete = () => {delete this element by id}; and add this to the initialization of the child component: onDelete={this.handleDelete}
 
-Local data doesn't get updated if parent tries to update it. Have the parent take care of the data handling.
+ Above is to have the single source of truth. The class that creates an instance of another class needs to manage the modifications of that instance.
 
 [...array] and {...dict} is for deep copy. Ex: newKiwi = [...newKiwi]
+
+
 

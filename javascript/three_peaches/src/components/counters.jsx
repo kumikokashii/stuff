@@ -26,7 +26,7 @@ class Counters extends Component {
           />
         ))}
       </div>
-    )
+    );
   }
 
   handlePlusOne = counter => {
