@@ -62,5 +62,9 @@ state = {
 	     return this.state.count === 0 ? 'Zero' : this.state.count;
        }
 
+https://picsum.photos/ to get random images!
+
+In HTML tags, CSS class is className (b/c class is a reserved JS name).
+
 
 
