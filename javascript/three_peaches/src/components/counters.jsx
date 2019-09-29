@@ -4,7 +4,7 @@ import Counter from './counter';
 
 class Counters extends Component {
   render() {
-    const {handleReset, counters, handlePlusOne, handleMinusOne, handleDelete} = this.props;
+    const {handleReset, counters, handlePlusOne, handleMinusOne, handleDelete, handleAdd} = this.props;
 
     return (
       <div>
@@ -20,6 +20,9 @@ class Counters extends Component {
             counter={counter}
           />
         ))}
+        <button className="btn btn-danger m-2" onClick={handleAdd}>
+          +
+        </button>
       </div>
     );
   }

@@ -7,8 +7,8 @@ class App extends Component {
   state = {
     counters: [
       {id: 0, value: 789},
-      {id: 1, value: 34},
-      {id: 2, value: 99}
+      {id: 1, value: -5},
+      {id: 2, value: 31}
     ]
   }
 
@@ -35,6 +35,7 @@ class App extends Component {
             handlePlusOne={this.handlePlusOne}
             handleMinusOne={this.handleMinusOne}
             handleDelete={this.handleDelete}
+            handleAdd={this.handleAdd}
           />
         </main>
       </React.Fragment>
@@ -75,6 +76,17 @@ class App extends Component {
       counter.value = 0;
       return counter;
     });
+    this.setState({counters: newCounters});
+  }
+
+  handleAdd = () => {
+    let newCounters = [...this.state.counters];
+    let maxId = -1;
+    this.state.counters.forEach(counter => {
+      maxId = counter.id > maxId ? counter.id : maxId;
+    }); 
+    newCounters.push({id: maxId+1, value: 0});
+
     this.setState({counters: newCounters});
   }
 }

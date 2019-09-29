@@ -10,12 +10,12 @@ class NavBar extends Component {
       <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">
           Balloon ^_^{" "}
-          <span className="badge badge-pill badge-secondary">
+          <span className="badge badge-pill badge-success">
             {n_counters}
           </span>
           <span>{" "}</span>
           Go *_*{" "}
-          <span className="badge badge-pill badge-secondary">
+          <span className="badge badge-pill badge-success">
             {sum_counter_values}
           </span>
         </a>

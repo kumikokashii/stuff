@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
+  getValueClass = counter => {
+    // diff. color for 0 or less.
+    let classStr = "badge m-2 badge-";
+    classStr += counter.value > 0 ? "primary" : "secondary";
+    return classStr;
+  }
+
   render() {
     const {counter, onPlusOne, onMinusOne, onDelete} = this.props;
 
     return (
       <div>
-        <span style={{fontSize: 27}} className="badge badge-primary m-2">{counter.value}</span>
+        <span style={{fontSize: 27}} className={this.getValueClass(counter)}>{counter.value}</span>
         <button 
           className="btn btn-warning m-2"
           onClick={() => onPlusOne(counter)}
