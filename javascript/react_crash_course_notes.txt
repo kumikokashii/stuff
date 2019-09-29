@@ -34,7 +34,7 @@ Each component's render method returns JSX
 - Babel compiles JSX via React. It does "React.createElement(...)"
 
 ------------------------------------------------
-More
+More 1: Good Stuff!
 ------------------------------------------------
 
 Bootstrap:
@@ -66,5 +66,16 @@ https://picsum.photos/ to get random images!
 
 In HTML tags, CSS class is className (b/c class is a reserved JS name).
 
+------------------------------------------------
+More 2: Better Stuff!
+------------------------------------------------
+React warns if a list's elements don't have individual keys. This is because React wants to know how to get to each element.
 
+In JavaScript, condition of (true && "Hi") is "Hi". It returns the LAST true/true-y element's value. (true && "Hi" && 1) is 1.
 
+For JavaScritpt event handing, only specify the NAME of the method. Ex: onClick={this.handleIncrement}. No need for ().
+
+React is strange when it comes to the instance variable "this". It is not always the instance. Read how it works here:
+https://medium.com/@nikolalsvk/loosing-bind-this-in-react-8637ebf372cf
+
+Don't update the state directly. React doesn't notice the change. Use setState.
