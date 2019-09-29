@@ -80,4 +80,11 @@ https://medium.com/@nikolalsvk/loosing-bind-this-in-react-8637ebf372cf
 
 Don't update the state directly. React doesn't notice the change. Use setState.
 
+Props (properties) are read-only and doe not change. They only come from that component's birthplace (where it is placed). State is what React reacts to. Read more here:
+https://blog.cloudboost.io/props-vs-state-in-react-js-9c186dcf39b8
+
+Initialize an instance like this, and this new component's proprs has value and selected: <ComponentName value={0} selected={true} />. Use thse to initialize the instance's state. After that, props aren't no longer needed.
+
+props.children is the inbetween elements.
+
 
