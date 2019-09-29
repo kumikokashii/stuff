@@ -15,11 +15,11 @@ Setup
 Install Node.js: brew install
 Install React: sudo npm i -g create-react-app@1.5.2
 
-Visual Studio Code w/ extentions
+Code editor (Visual Studio Code) w/ extentions
 - Simple React Snippets
 - Prettier, code reformatter
 
-When I deleted local apps and cloned the Gihub repo, it didn't work until in each app dir, "npm install" was run.
+When I cloned the Gihub repo, it didn't work until in each app dir, "npm install" was run.
 
 ------------------------------------------------
 First App
@@ -43,22 +43,23 @@ Bootstrap:
 - Add to index.js: import 'bootstrap/dist/css/bootstrap.css';
 
 In src, create a directory called components. Make a file per component.
-- Name componentName.jsx (jsx = JavaScriptXML. instead of just .js). Use camelcase
+- Name componentName.jsx (jsx = JavaScriptXML. instead of just .js). Use camelCase.
 - Import that class in index.js: import Counter from './components/counter';
 - Use it as <Counter />
+- When you "export default ComponentName", you don't need {} in import. Just do "import ComponentName from './components/componentName"
 
-React.Fragment is when you don't wrap 2+ elements in <div></div>.
+Render method needs 1 top-level element. If more, confused unless React.Fragment is used.
 
-For a component, sdynamic text:
+State to store data.
 state = {
   count: 0,
   address: {
     street: xyz
   }
 }
-... and use it like: <span>{this.state.count}</span>,
+... and use it anywhere like: <span>{this.state.count}</span>,
 ... or formatCount() {
-	   return this.state.count === 0 ? 'Zero' : this.state.count;
+	     return this.state.count === 0 ? 'Zero' : this.state.count;
        }
 
 

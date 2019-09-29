@@ -10,6 +10,7 @@ class Counter extends Component {
       <div>
         <h1>U say goodbye, I say hi!</h1>
         <h3>{this.state.n} times ^_^</h3>
+        <button>Go!</button>
       </div>
     )
   }
