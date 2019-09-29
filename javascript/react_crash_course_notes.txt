@@ -1,7 +1,7 @@
-================================================
+==========================================================
 React Crash Course
 https://www.youtube.com/watch?v=Ke90Tje7VS0
-================================================
+==========================================================
 
 DOM = Document Object Model
 - DOM elements are window, document, table, etc.
@@ -10,11 +10,11 @@ React is a View library, not a framework like Angular. It reacts to state change
 
 Browser's React Developer Tools extention: Install and its a new tab in Inspect (Option + Command + i). When you see "==$x", go to the Console tab and use it to view/manipulate. For ex, if $x is a button, $x.click, etc.
 
-------------------------------------------------
+==========================================================
 Setup
-------------------------------------------------
+==========================================================
 
-Install Node.js: brew install
+Install Node.js: brew install node
 Install React: sudo npm i -g create-react-app@1.5.2
 
 Code editor (Visual Studio Code) w/ extentions
@@ -24,7 +24,10 @@ Code editor (Visual Studio Code) w/ extentions
 When I cloned the Gihub repo, it didn't work until in each app dir, "npm install" was run.
 
 ------------------------------------------------
+------------------------------------------------
+==========================================================
 First App
+==========================================================
 ------------------------------------------------
 
 Create a new app: create-react-app app-name (app-name can be anything)
@@ -35,9 +38,9 @@ Each component's render method returns JSX
 - JSX = JavaScriptXML, looks like <h1>Hello<h1>
 - Babel compiles JSX via React. It does "React.createElement(...)"
 
-------------------------------------------------
+==========================================================
 More 1: Good Stuff!
-------------------------------------------------
+==========================================================
 
 Bootstrap:
 - "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation and other interface components."
@@ -68,9 +71,10 @@ https://picsum.photos/ to get random images!
 
 In HTML tags, CSS class is className (b/c class is a reserved JS name).
 
-------------------------------------------------
+==========================================================
 More 2: Better Stuff!
-------------------------------------------------
+==========================================================
+
 React warns if a list's elements don't have individual keys. This is because React wants to know how to get to each element.
 
 In JavaScript, condition of (true && "Hi") is "Hi". It returns the LAST true/true-y element's value. (true && "Hi" && 1) is 1.
@@ -80,18 +84,19 @@ For JavaScritpt event handing, only specify the NAME of the method. Ex: onClick=
 React is strange when it comes to the instance variable "this". It is not always the instance. Read how it works here:
 https://medium.com/@nikolalsvk/loosing-bind-this-in-react-8637ebf372cf
 
-Don't update the state directly. React doesn't notice the change. Use setState.
+Don't update the state directly. Use setState.
 
-Props (properties) are read-only and can not change. They only come from that component's birthplace (where it is placed). State is what React reacts to, and private to self. Read more here:
+Props (properties) are read-only and can not be change once the instance is created. They only come from that component's birthplace (where it is placed).
+State is what React reacts to, and private to self. Read more here:
 https://blog.cloudboost.io/props-vs-state-in-react-js-9c186dcf39b8
 
-Initialize an instance like this, and this new component's proprs has value and selected: <ComponentName value={0} selected={true} />. Use thse to initialize the instance's state. 
+Initialize an instance like this, and this new component's props has value and selected: <ComponentName value={0} selected={true} />.
 
 props.children is the inbetween elements.
 
-------------------------------------------------
+==========================================================
 More 3: Even Better Stuff!
-------------------------------------------------
+==========================================================
 
 props can have a function. For example, to remove an element from a list where each element is a component of a whole, 
   let <button onClick={this.props.onDelete}>...
@@ -101,9 +106,9 @@ props can have a function. For example, to remove an element from a list where e
 
 [...array] and {...dict} is for deep copy. Ex: newKiwi = [...newKiwi]
 
-------------------------------------------------
+==========================================================
 More 4: Studious Stuff
-------------------------------------------------
+==========================================================
 
 Stateless Functional Component:
 Instead of a class, if the class has nothing other than render, then you can make it into a func that returns the same thing: const NavBar = props => {return (the elements);}. Change this.props to props.
