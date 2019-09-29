@@ -102,7 +102,7 @@ props can have a function. For example, to remove an element from a list where e
 [...array] and {...dict} is for deep copy. Ex: newKiwi = [...newKiwi]
 
 ------------------------------------------------
-More 3: Sleepy Stuff zzz
+More 4: Studious Stuff
 ------------------------------------------------
 
 Stateless Functional Component:
@@ -113,5 +113,9 @@ At the beginning of render method, specify what prop fields to use, and avoid wr
 const {counters, onReset} = this.props;
 ... onClick={onReset} instead of onClick={this.propr.onReset}
 
+props isn't automatically passed to constructor. so do: constructor(props) and inside super(props). then this.props becomes available within the constructor.
 
-
+Lifecycle hooks of DOM elements. method calls in order:
+1. Mount phase: counstructor > render > componentDidMount
+2. Update phase (triggered by setState): render > componentDidUpdate(prevProps, prevState)
+3. Unmount phase: componentWillUnmount
