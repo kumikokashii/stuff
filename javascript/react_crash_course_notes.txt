@@ -8,6 +8,8 @@ DOM = Document Object Model
 
 React is a View library, not a framework like Angular. It reacts to state change between Virtual DOM and Real DOM. Each component is a class with state and render method.
 
+Browser's React Developer Tools extention: Install and its a new tab in Inspect (Option + Command + i). When you see "==$x", go to the Console tab and use it to view/manipulate. For ex, if $x is a button, $x.click, etc.
+
 ------------------------------------------------
 Setup
 ------------------------------------------------
@@ -80,11 +82,20 @@ https://medium.com/@nikolalsvk/loosing-bind-this-in-react-8637ebf372cf
 
 Don't update the state directly. React doesn't notice the change. Use setState.
 
-Props (properties) are read-only and doe not change. They only come from that component's birthplace (where it is placed). State is what React reacts to. Read more here:
+Props (properties) are read-only and can not change. They only come from that component's birthplace (where it is placed). State is what React reacts to, and private to self. Read more here:
 https://blog.cloudboost.io/props-vs-state-in-react-js-9c186dcf39b8
 
-Initialize an instance like this, and this new component's proprs has value and selected: <ComponentName value={0} selected={true} />. Use thse to initialize the instance's state. After that, props aren't no longer needed.
+Initialize an instance like this, and this new component's proprs has value and selected: <ComponentName value={0} selected={true} />. Use thse to initialize the instance's state. 
 
 props.children is the inbetween elements.
 
+------------------------------------------------
+More 3: Even Better Stuff!
+------------------------------------------------
+
+props can have a function. For example, to remove an element from a list where each element is a component of a whole, 
+  let <button onClick={this.props.onDelete}>...
+  ... whole has an event-handler like: handleDelete = () => {delete this element by id}; and add this to the initialization of the child component: onDelete={this.handleDelete}
+
+Local data doesn't get updated if parent tries to update it. Have the parent take care of the data handling.
 

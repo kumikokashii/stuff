@@ -13,9 +13,57 @@ class Counters extends Component {
   render() {
     return (
       <div>
-        {this.state.counters.map(counter => (<Counter key={counter.id} value={counter.value} />))}
+        <button className="btn btn-dark m-2" onClick={this.handleReset}>
+          Reset
+        </button>
+        {this.state.counters.map(counter => (
+          <Counter 
+            key={counter.id}
+            onPlusOne={this.handlePlusOne}
+            onMinusOne={this.handleMinusOne}
+            onDelete={this.handleDelete}
+            counter={counter}
+          />
+        ))}
       </div>
     )
+  }
+
+  handlePlusOne = counter => {
+    // Make a copy of the current counters
+    // Only update the given counter's value
+    // Just don't update the current counters or any of the individual counter
+    let newCounters = [...this.state.counters];
+    let i = this.state.counters.indexOf(counter);
+    newCounters[i] = {...counter};
+    newCounters[i].value += 1;
+
+    this.setState({counters: newCounters});
+  }
+
+  handleMinusOne = counter => {
+    // Make a copy of the current counters
+    // Only update the given counter's value
+    // Just don't update the current counters or any of the individual counter
+    let newCounters = [...this.state.counters];
+    let i = this.state.counters.indexOf(counter);
+    newCounters[i] = {...counter};
+    newCounters[i].value -= 1;
+
+    this.setState({counters: newCounters});
+  }
+
+  handleDelete = counterId => {
+    let newCounters = this.state.counters.filter(counter => counter.id !== counterId);
+    this.setState({counters: newCounters});
+  }
+
+  handleReset = () => {
+    let newCounters = this.state.counters.map(counter => {
+      counter.value = 0;
+      return counter;
+    });
+    this.setState({counters: newCounters});
   }
 }
 
