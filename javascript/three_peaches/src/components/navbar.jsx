@@ -4,10 +4,15 @@ import React, { Component } from 'react';
 
 class NavBar extends Component {
   render() {
+    const {n_counters} = this.props;
+
     return (
       <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">
-          Balloon ^_^
+          Balloon ^_^{" "}
+          <span className="badge badge-pill badge-secondary">
+            {n_counters}
+          </span>
         </a>
       </nav>
     );

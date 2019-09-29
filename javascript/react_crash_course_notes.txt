@@ -101,5 +101,17 @@ props can have a function. For example, to remove an element from a list where e
 
 [...array] and {...dict} is for deep copy. Ex: newKiwi = [...newKiwi]
 
+------------------------------------------------
+More 3: Sleepy Stuff zzz
+------------------------------------------------
+
+Stateless Functional Component:
+Instead of a class, if the class has nothing other than render, then you can make it into a func that returns the same thing: const NavBar = props => {return (the elements);}. Change this.props to props.
+
+Destructing Arguments:
+At the beginning of render method, specify what prop fields to use, and avoid writing this.props.fieldName.
+const {counters, onReset} = this.props;
+... onClick={onReset} instead of onClick={this.propr.onReset}
+
 
 
