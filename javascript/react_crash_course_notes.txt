@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=Ke90Tje7VS0
 DOM = Document Object Model
 - DOM elements are window, document, table, etc.
 
-React is a View library, not a framework like Angular. It reacts to state change, to update DOM, without directly updating DOM. Each component is a class with state and render method.
+React is a View library, not a framework like Angular. It reacts to state change between Virtual DOM and Real DOM. Each component is a class with state and render method.
 
 ------------------------------------------------
 Setup
@@ -79,3 +79,5 @@ React is strange when it comes to the instance variable "this". It is not always
 https://medium.com/@nikolalsvk/loosing-bind-this-in-react-8637ebf372cf
 
 Don't update the state directly. React doesn't notice the change. Use setState.
+
+
