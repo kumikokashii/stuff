@@ -13,11 +13,10 @@ class App extends Component {
   }
 
   get_sum_counter_values = () => {
-    console.log("hihihihi!");
     let s = 0;
-    for (let counter in this.state.counters) {
+    this.state.counters.forEach(counter => {
       s += counter.value;
-    }
+    });
     return s;
   }
 
@@ -26,6 +25,7 @@ class App extends Component {
       <React.Fragment>  {/* Need it b/c more than 1 element */}
         <NavBar 
           n_counters={this.state.counters.filter(counter => counter.value > 0).length}
+          sum_counter_values={this.get_sum_counter_values()}
         />
 
         <main className="container">
