@@ -23,12 +23,9 @@ Code editor (Visual Studio Code) w/ extentions
 
 When I cloned the Gihub repo, it didn't work until in each app dir, "npm install" was run.
 
-------------------------------------------------
-------------------------------------------------
 ==========================================================
 First App
 ==========================================================
-------------------------------------------------
 
 Create a new app: create-react-app app-name (app-name can be anything)
 
@@ -102,7 +99,7 @@ props can have a function. For example, to remove an element from a list where e
   let <button onClick={this.props.onDelete}>...
   ... whole has an event-handler like: handleDelete = () => {delete this element by id}; and add this to the initialization of the child component: onDelete={this.handleDelete}
 
- Above is to have the single source of truth. The class that creates an instance of another class needs to manage the modifications of that instance.
+Above is passing the event upward. You can't delete yourself!  
 
 [...array] and {...dict} is for deep copy. Ex: newKiwi = [...newKiwi]
 
@@ -116,7 +113,7 @@ Instead of a class, if the class has nothing other than render, then you can mak
 Destructing Arguments:
 At the beginning of render method, specify what prop fields to use, and avoid writing this.props.fieldName.
 const {counters, onReset} = this.props;
-... onClick={onReset} instead of onClick={this.propr.onReset}
+... onClick={onReset} instead of onClick={this.props.onReset}
 
 props isn't automatically passed to constructor. so do: constructor(props) and inside super(props). then this.props becomes available within the constructor.
 
