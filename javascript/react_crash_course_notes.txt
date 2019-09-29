@@ -99,3 +99,5 @@ props can have a function. For example, to remove an element from a list where e
 
 Local data doesn't get updated if parent tries to update it. Have the parent take care of the data handling.
 
+[...array] and {...dict} is for deep copy. Ex: newKiwi = [...newKiwi]
+
