@@ -1,0 +1,117 @@
+open -a Simulator
+
+cd (to the app folder)
+
+flutter run
+
+=================================================================
+Widgets: https://flutter.dev/docs/development/ui/widgets-intro
+=================================================================
+
+A widget’s main job is to implement a build() function, which describes the widget in terms of other, lower-level widgets. The framework builds those widgets in turn until the process bottoms out in widgets that represent the underlying RenderObject, which computes and describes the geometry of the widget.
+
+> Multiple Explanded
+You can have multiple Expanded children and determine the ratio in which they consume the available space using the flex argument to Expanded.
+
+> State
+Stateful widgets maintain state that might change during the lifetime of the widget. Implementing a stateful widget requires at least two classes: 1) a StatefulWidget class that creates an instance of 2) a State class. The StatefulWidget class is, itself, immutable, but the State class persists over the lifetime of the widget.
+
+=================================================================
+Layout: https://flutter.dev/docs/development/ui/layout
+=================================================================
+
+In Flutter, almost everything is a widget—even layout models are widgets. The images, icons, and text that you see in a Flutter app are all widgets. But things you don’t see are also widgets, such as the rows, columns, and grids that arrange, constrain, and align the visible widgets.
+
+> Container for padding
+Use a Container when you want to add padding, margins, borders, or background color, to name some of its capabilities.
+
+=================================================================
+Basics
+=================================================================
+
+Key property: https://api.flutter.dev/flutter/widgets/Widget/key.html
+
+Colon after Constructor in dart:
+https://stackoverflow.com/questions/50274605/colon-after-constructor-in-dart
+
+Use arrow notation for one-line functions or methods.
+
+Prefixing an identifier with an underscore enforces privacy in the Dart language.
+
+Material icons: https://material.io/resources/icons/?style=baseline
+
+State class can access its Widget class variables (instance variables) by:
+widget.variable_name
+
+Dart Singleton: https://stackoverflow.com/questions/12649573/how-do-you-build-a-singleton-in-dart
+- Classname.function_name() is a constructor.
+- If the function_name starts with an underscore, it's private
+
+Future, Asynchronous operation: https://dart.dev/codelabs/async-await
+- If in build, using an asynchronous func, it returns Future. Cannot do this. Use FutureBuilder, which is a widget class for using asynchronous functions
+- On FutureBuilder: https://www.youtube.com/watch?v=FfThvl0HfyA&t=351s
+
+Overflow out of screen. Wrap everything in SingleChildScrollView: https://github.com/flutter/flutter/issues/14171
+
+=================================================================
+Navigation: https://flutter.dev/docs/cookbook/navigation/passing-data
+=================================================================
+
+=================================================================
+Sidebar Menu (Drawer): https://www.youtube.com/watch?v=kVi7taaaUVM
+=================================================================
+It's a part of Scaffold widget
+
+=================================================================
+Data Storage: https://pusher.com/tutorials/local-data-flutter
+=================================================================
+
+SQLite files for the app is saved in here: 
+~/Library/Developer/CoreSimulator/Devices/[DeviceID]/data/Containers/Data/Application/[AppID]/
+where
+- DeviceId can be found by: instruments -s devices
+- AppId can be found by: cannot be found
+- Call this function in builder, before return:
+Future<void> getLocalPath() async {
+	var directory = await getApplicationDocumentsDirectory();
+	print(directory.path);
+}
+
+Read & Write example: https://flutter.dev/docs/cookbook/persistence/reading-writing-files
+
+=================================================================
+Form: https://flutterbyexample.com/forms-1-user-input/
+=================================================================
+Input field needs a controller.
+
+TextEditingController exampleController = TextEditingController();
+
+TextField(
+	ontroller: exampleController,
+)
+
+For multi-line,
+TextField(
+  keyboardType: TextInputType.multiline,
+  maxLines: null,
+)
+
+DatePicker: https://www.youtube.com/watch?v=iDOR0rf0BGI
+(code from above video: https://github.com/boriszv/Flutter-DatePicker-Example/blob/master/lib/main.dart)
+
+=================================================================
+Image from Gallery and Camera: https://www.youtube.com/watch?v=cyhuPzAlgUU
+=================================================================
+Add to dependency in yaml: "image_picker:"
+
+Add 3 keys to info file: https://pub.dev/packages/image_picker
+
+Camera is not available in Simulator. Must test with real devices. Gallery works on Simulator.
+
+Switch b/w Image file to byte code string:
+https://stackoverflow.com/questions/46145472/how-to-convert-base64-string-into-image-with-flutter
+
+=================================================================
+Alert: https://www.youtube.com/watch?v=FGfhnS6skMQ
+=================================================================
+
