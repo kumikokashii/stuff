@@ -1,0 +1,40 @@
+
+====================================================
+Pass info from Child to Parent like React props:
+====================================================
+
+https://stackoverflow.com/questions/48481590/how-to-set-update-state-of-statefulwidget-from-other-statefulwidget-in-flutter
+
+====================================================
+Mysterious, not working when a widget constructor calls another class's constructor for a variable
+====================================================
+
+> Do this variable initialization in main(), and pass it down
+
+====================================================
+Datetime String Formatting: https://stackoverflow.com/questions/16126579/how-do-i-format-a-date-with-dart
+====================================================
+-Need intl package in dependecies in the yaml file: intl: 0.16.0 
+
+====================================================
+Random
+====================================================
+Container properties: https://medium.com/jlouage/container-de5b0d3ad184
+
+Empty widget: SizedBox.shrink();
+
+====================================================
+More on SQLite
+====================================================
+To use SQLite, add to dependencies:
+- sqflite
+- path_provider
+
+SQLite x Flutter: https://pub.dev/packages/sqflite
+
+On Mac, show Library in Finder:
+1. chflags nohidden ~/Library/
+2. This opens up the options to add Library in Finder View menu
+3. Go there and enable it
+
+
