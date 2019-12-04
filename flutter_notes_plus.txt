@@ -61,3 +61,12 @@ https://stackoverflow.com/questions/51304568/scaffold-of-called-with-a-context-t
 Slidable: https://pub.dev/packages/flutter_slidable
 ====================================================
 
+====================================================
+Carousel: https://pub.dev/packages/carousel_slider
+====================================================
+- Horizontal and snappable
+- Set viewportFraction: 1.0 for full width
+
+====================================================
+Popup Dialog: https://androidkt.com/flutter-alertdialog-example/
+====================================================
