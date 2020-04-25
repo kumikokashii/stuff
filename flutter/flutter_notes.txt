@@ -87,7 +87,7 @@ Input field needs a controller.
 TextEditingController exampleController = TextEditingController();
 
 TextField(
-	ontroller: exampleController,
+	controller: exampleController,
 )
 
 For multi-line,
