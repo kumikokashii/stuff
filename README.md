@@ -8,7 +8,7 @@ Code and notes I wrote from doing tutorials, plus nice tricks I learnt over the 
 ## Web:
 - Javascript and React
 - PHP
-- HTTP Request: What happends
+- HTTP Request: What happens
 
 ## Data:
 - Database and SQL
