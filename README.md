@@ -1,6 +1,6 @@
 # stuff
 
-Code and notes I wrote from doing tutorials, plus nice tricks I learnt over the years.
+Code and notes I wrote from doing tutorials and studying, plus nice tricks I learnt over the years.
 
 ## Mobile:
 - Flutter
