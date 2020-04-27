@@ -2,13 +2,11 @@
 
 Code and notes I wrote from doing tutorials and studying, plus nice tricks I learnt over the years.
 
-## Mobile
-- Flutter
-
-## Web
+## Web & Mobile
 - Javascript and React
 - PHP
 - HTTP Request: What happens
+- Flutter
 
 ## Data
 - Database and SQL
