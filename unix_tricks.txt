@@ -1,0 +1,3 @@
+Identifying ports in use:
+- https://help.extensis.com/hc/en-us/articles/360004935154-Identifying-ports-in-use-on-Mac-and-Windows-Operating-Systems
+- sudo lsof -i -n -P | grep TCP
