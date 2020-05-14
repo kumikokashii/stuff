@@ -17,6 +17,7 @@ Code and notes I wrote from doing tutorials and studying, plus nice tricks I lea
 
 ## Else
 - Algorithm and Data Structures
+- UNIX tricks
 
 ## Later
 - [HAProxy & Load Balancing](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
