@@ -1,3 +1,7 @@
 Identifying ports in use:
 - https://help.extensis.com/hc/en-us/articles/360004935154-Identifying-ports-in-use-on-Mac-and-Windows-Operating-Systems
 - sudo lsof -i -n -P | grep TCP
+
+Bypass CORS for local dev'ing:
+- https://alfilatov.com/posts/run-chrome-without-cors/
+- open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
