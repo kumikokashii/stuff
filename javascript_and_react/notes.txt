@@ -1,4 +1,4 @@
-Tsting React with Jest and Enzyme: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
+Testing React with Jest and Enzyme: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
 
 Enzyme simulate events like click: https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/simulate.html
 
