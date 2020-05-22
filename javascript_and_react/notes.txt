@@ -1,3 +1,6 @@
-Testing React with Jest and Enzyme: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
+Tsting React with Jest and Enzyme: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
 
 Enzyme simulate events like click: https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/simulate.html
+
+Debouncing with React: https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci
+- Key is in returning the clearTimeout func in useEffect. This is called every time the search input value is updated.
