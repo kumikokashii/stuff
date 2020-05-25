@@ -8,3 +8,6 @@ Debouncing with React: https://dev.to/gabe_ragland/debouncing-with-react-hooks-j
 Typeahead React component with Bootstrap:
 - Example: http://ericgio.github.io/react-bootstrap-typeahead/
 - Use labelKey to pass label (what you see) and value (behind the scene id): https://github.com/ericgio/react-bootstrap-typeahead/blob/master/docs/Rendering.md
+
+React Bootstrap margin and padding: https://mdbootstrap.com/docs/react/utilities/spacing/
+- everything is already prepped.
