@@ -11,3 +11,8 @@ Typeahead React component with Bootstrap:
 
 React Bootstrap margin and padding: https://mdbootstrap.com/docs/react/utilities/spacing/
 - everything is already prepped.
+
+Bootstrap layout with Row and Column
+- Note: Max number is 12.
+- https://getbootstrap.com/docs/4.0/layout/grid/
+- https://react-bootstrap.github.io/layout/grid/
