@@ -4,6 +4,14 @@ Testing React with Jest and Enzyme
 - mock function explained: https://youtu.be/2d-SX8YRyis
 - Expect: https://jestjs.io/docs/en/expect
 
+Testing basics:
+- each test case starts with clean setup
+- need a test when we wanna see if something is rendered first time (a new page, a new text that shows up on a click, etc)
+
+General basics:
+- logic and view in 1 component is a good design
+- when importing libraries, import only minimal needed like: import cloneDeep from 'lodash/cloneDeep' (rather than: import _ from 'lodash')
+
 Debouncing with React: https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci
 - Key is in returning the clearTimeout func in useEffect. This is called every time the search input value is updated.
 
