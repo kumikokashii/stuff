@@ -14,6 +14,9 @@ React-Redux
   const dispatch = useDispatch();
   onClick={() => dispatch(updateValue())} where updateValue is an action.
 
+- combine action and reducer w/ slice
+  - https://www.taniarascia.com/redux-react-guide/#slices
+
 Testing React with Jest and Enzyme
 - basic: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
 - Enzyme simulate events like click: https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/simulate.html
