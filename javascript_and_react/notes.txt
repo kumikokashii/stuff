@@ -1,25 +1,43 @@
+React-Redux
+- https://www.youtube.com/watch?v=CVpUuw9XSjY&list=PLsJnkoeMY_fQlBEw1WkNXtqnfnX5CYeaM&index=4&t=0s
+
+- setting up
+  - Store is the global state. when creating a Store, give all Reducers and Middleware (thunk).
+  - Reducer is a function that, given a state and a payload, returns the updated state PER Action.
+  - Action is a function that returns its own attributes like name and payload.
+  - wrap the app in <Provider store={store}> :) </Provider>
+  
+- using:
+  - To use a state value,
+  const { value } = useSelector(state => state.value);
+  - To update a state value,
+  const dispatch = useDispatch();
+  onClick={() => dispatch(updateValue())} where updateValue is an action.
+
 Testing React with Jest and Enzyme
 - basic: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
 - Enzyme simulate events like click: https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/simulate.html
 - mock function explained: https://youtu.be/2d-SX8YRyis
 - Expect: https://jestjs.io/docs/en/expect
 
-Testing basics:
+Testing basics
 - each test case starts with clean setup
 - need a test when we wanna see if something is rendered first time (a new page, a new text that shows up on a click, etc)
 
-General basics:
+General basics
 - logic and view in 1 component is a good design
 - when importing libraries, import only minimal needed like: import cloneDeep from 'lodash/cloneDeep' (rather than: import _ from 'lodash')
 
-Debouncing with React: https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci
+Debouncing with React
+- https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci
 - Key is in returning the clearTimeout func in useEffect. This is called every time the search input value is updated.
 
-Typeahead React component with Bootstrap:
+Typeahead React component with Bootstrap
 - Example: http://ericgio.github.io/react-bootstrap-typeahead/
 - Use labelKey to pass label (what you see) and value (behind the scene id): https://github.com/ericgio/react-bootstrap-typeahead/blob/master/docs/Rendering.md
 
-React Bootstrap margin and padding: https://mdbootstrap.com/docs/react/utilities/spacing/
+React Bootstrap margin and padding
+- https://mdbootstrap.com/docs/react/utilities/spacing/
 - everything is already prepped.
 
 Bootstrap layout with Row and Column
