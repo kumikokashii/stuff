@@ -22,6 +22,7 @@ Testing React with Jest and Enzyme
 - Enzyme simulate events like click: https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/simulate.html
 - mock function explained: https://youtu.be/2d-SX8YRyis
 - Expect: https://jestjs.io/docs/en/expect
+- Some 3rd party API components are not testable: https://github.com/enzymejs/enzyme/blob/d65fc69d87e985fcb51ad5cdc8fdec4933519fe6/docs/common-issues.md#testing-third-party-libraries
 
 Testing basics
 - each test case starts with clean setup
