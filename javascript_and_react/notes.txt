@@ -48,3 +48,6 @@ Bootstrap layout with Row and Column
 - Note: Max number is 12.
 - https://getbootstrap.com/docs/4.0/layout/grid/
 - https://react-bootstrap.github.io/layout/grid/
+
+Bootstrap responsive toggle
+- https://getbootstrap.com/docs/4.0/utilities/display/
