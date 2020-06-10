@@ -1,53 +1,67 @@
+=============================================================
 React-Redux
-- https://www.youtube.com/watch?v=CVpUuw9XSjY&list=PLsJnkoeMY_fQlBEw1WkNXtqnfnX5CYeaM&index=4&t=0s
+=============================================================
+https://www.youtube.com/watch?v=CVpUuw9XSjY&list=PLsJnkoeMY_fQlBEw1WkNXtqnfnX5CYeaM&index=4&t=0s
 
-- setting up
+1. setting up
   - Store is the global state. when creating a Store, give all Reducers and Middleware (thunk).
   - Reducer is a function that, given a state and a payload, returns the updated state PER Action.
   - Action is a function that returns its own attributes like name and payload.
   - wrap the app in <Provider store={store}> :) </Provider>
   
-- using:
+2. using
   - To use a state value,
   const { value } = useSelector(state => state.value);
   - To update a state value,
   const dispatch = useDispatch();
   onClick={() => dispatch(updateValue())} where updateValue is an action.
 
-- combine action and reducer w/ slice
+3. combine action and reducer w/ slice
   - https://www.taniarascia.com/redux-react-guide/#slices
 
+=============================================================
 Testing React with Jest and Enzyme
+=============================================================
 - basic: https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
 - Enzyme simulate events like click: https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/simulate.html
 - mock function explained: https://youtu.be/2d-SX8YRyis
 - Expect: https://jestjs.io/docs/en/expect
 - Some 3rd party API components are not testable: https://github.com/enzymejs/enzyme/blob/d65fc69d87e985fcb51ad5cdc8fdec4933519fe6/docs/common-issues.md#testing-third-party-libraries
 
+=============================================================
 Testing basics
+=============================================================
 - each test case starts with clean setup
 - need a test when we wanna see if something is rendered first time (a new page, a new text that shows up on a click, etc)
 
+=============================================================
 General basics
+=============================================================
 - logic and view in 1 component is a good design
 - when importing libraries, import only minimal needed like: import cloneDeep from 'lodash/cloneDeep' (rather than: import _ from 'lodash')
+- props with Typescript propName? (=optional): when a react component instance is created, it first goes through the defaultProps. if a prop is missing and the default is specified, then the instance now has that prop. then, it goes to the Props interface. if a propr is optional and the instance doesn't have this prop, then that prop is undefined.
 
+=============================================================
 Debouncing with React
+=============================================================
 - https://dev.to/gabe_ragland/debouncing-with-react-hooks-jci
 - Key is in returning the clearTimeout func in useEffect. This is called every time the search input value is updated.
 
-Typeahead React component with Bootstrap
-- Example: http://ericgio.github.io/react-bootstrap-typeahead/
-- Use labelKey to pass label (what you see) and value (behind the scene id): https://github.com/ericgio/react-bootstrap-typeahead/blob/master/docs/Rendering.md
+=============================================================
+Bootstrap x React
+=============================================================
+margin and padding
+  - https://mdbootstrap.com/docs/react/utilities/spacing/
 
-React Bootstrap margin and padding
-- https://mdbootstrap.com/docs/react/utilities/spacing/
-- everything is already prepped.
+layout with Row and Column
+  - Note: Max number is 12.
+  - https://getbootstrap.com/docs/4.0/layout/grid/
+  - https://react-bootstrap.github.io/layout/grid/
 
-Bootstrap layout with Row and Column
-- Note: Max number is 12.
-- https://getbootstrap.com/docs/4.0/layout/grid/
-- https://react-bootstrap.github.io/layout/grid/
+responsive toggle
+  - https://getbootstrap.com/docs/4.0/utilities/display/
 
-Bootstrap responsive toggle
-- https://getbootstrap.com/docs/4.0/utilities/display/
+Typeahead component
+  - Example: http://ericgio.github.io/react-bootstrap-typeahead/
+  - Use labelKey to pass label (what you see) and value (behind the scene id): https://github.com/ericgio/react-bootstrap-typeahead/blob/master/docs/Rendering.md
+
