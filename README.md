@@ -16,6 +16,7 @@ Code and notes I wrote from doing tutorials and studying, plus nice tricks I lea
 - Statistics and Probabilities
 
 ## Else
+- [Introduction to Microservices, Docker, and Kubernetes](https://www.youtube.com/watch?v=1xo-0gCVhTU)
 - Algorithm and Data Structures
 - UNIX tricks
 
