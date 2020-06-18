@@ -1,4 +1,9 @@
 =============================================================
+React general
+=============================================================
+Dynamic component rendering by its name: https://alexvab.com/posts/how-to-dynamically-render-react-js-components
+
+=============================================================
 React-Redux
 =============================================================
 https://www.youtube.com/watch?v=CVpUuw9XSjY&list=PLsJnkoeMY_fQlBEw1WkNXtqnfnX5CYeaM&index=4&t=0s
