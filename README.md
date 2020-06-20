@@ -21,6 +21,7 @@ Code and notes I wrote from doing tutorials and studying, plus nice tricks I lea
 - UNIX tricks
 - Python tricks
 - Algorithm and Data Structures
+- Encryption
 
 ## Later
 - [HAProxy & Load Balancing](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
