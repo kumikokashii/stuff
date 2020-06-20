@@ -79,7 +79,7 @@ const main = async () => {
 
   const i1Name = await indexDocs(db, ['_id']); // created
   await printIndexes(db);
-  
+
   await indexDocs(db, ['_id']); // not created b/c same
   
   await indexDocs(db, ['_id', 'type']); // created b/c new
