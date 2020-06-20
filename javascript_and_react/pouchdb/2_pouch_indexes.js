@@ -87,6 +87,8 @@ const main = async () => {
 
   await deleteIndexByName(db, i1Name); // deleted
   await printIndexes(db);
+
+  await db.destroy();
 }
 
 main();

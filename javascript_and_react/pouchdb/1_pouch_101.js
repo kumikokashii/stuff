@@ -93,6 +93,8 @@ const createFetchDeleteDoc = async () => {
   println();
 
   await printDocs(db);
+
+  await db.destroy();
 }
 
 const main = async () => {
