@@ -2,5 +2,5 @@
 
 clear
 rm -fr fruits
-node test_pouch.js
+node 2_pouch_indexes.js
 
