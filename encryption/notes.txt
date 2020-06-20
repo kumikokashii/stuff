@@ -1,0 +1,5 @@
+ECDSA (= elliptic curve digital signature algorithm)
+- https://blog.cloudflare.com/ecdsa-the-digital-signature-algorithm-of-a-better-internet/
+
+RSA Encryption Algorithm
+- https://youtu.be/wXB-V_Keiu8
