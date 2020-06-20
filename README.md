@@ -4,21 +4,23 @@ Code and notes I wrote from doing tutorials and studying, plus nice tricks I lea
 
 ## Web & Mobile
 - Javascript and React
+- Web
 - PHP
-- HTTP Request: What happens
 - Flutter
 
 ## Data
 - Database and SQL
-- Python tricks
 - Python visualizations
 - Spark
 - Statistics and Probabilities
 
-## Else
+## DevOps
 - [Introduction to Microservices, Docker, and Kubernetes](https://www.youtube.com/watch?v=1xo-0gCVhTU)
-- Algorithm and Data Structures
+
+## Else
 - UNIX tricks
+- Python tricks
+- Algorithm and Data Structures
 
 ## Later
 - [HAProxy & Load Balancing](https://www.digitalocean.com/community/tutorials/an-introduction-to-haproxy-and-load-balancing-concepts)
