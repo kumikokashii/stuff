@@ -8,7 +8,12 @@ const println = () => {console.log()};
 const createDeleteDatabase = async () => {
   // create a database
   const db = await new PouchDB('lalala');
-  log('db name =', db.name);
+  
+  // get info
+  log('db info');
+  await db.info()
+    .then((result) => log(result))
+    .catch((err) => log(err));
   println();
 
   // note: can't list all databases
@@ -86,6 +91,8 @@ const createFetchDeleteDoc = async () => {
     });
 
   println();
+
+  await printDocs(db);
 }
 
 const main = async () => {
