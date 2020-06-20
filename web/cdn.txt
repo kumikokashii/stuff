@@ -1,0 +1,18 @@
+CDN (= Content Delivery Network)
+summary by CEO of Fastly: https://youtu.be/farO15_0NUQ
+
+what do they do?
+- Caching
+- Serve user from a closer location
+
+why?
+1. Performance
+- Bounce rate goes up as latency adds up
+
+2. Security
+- DDOS (= distributed denial-of-service) attacks
+
+3. Availability
+- Even if your server goes down, it can serve what it has
+
+* Even with no cacheable content, the shorter distance b/w the requester and CDN, plus the already established connection b/w CDN and your server help deliver the response more fastly!
