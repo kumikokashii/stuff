@@ -75,7 +75,7 @@ const main = async () => {
   // query 1: using ddoc
   log('query 1');
   printDocs(await db.query(
-    'fruits',  // ddoc's _id value without the first part
+    'fruits',  // ddoc's views' key
     {
       keys: ['03', '08'],
       include_docs: true,
