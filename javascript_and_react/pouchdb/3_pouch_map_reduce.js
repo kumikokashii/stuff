@@ -19,6 +19,10 @@ const println = () => {console.log()};
  * first param of emit in mapper is a key, or a list of keys.
  * use these keys in the query param.
  * also, result will be sorted by the keys
+ * 
+ * if the query has {include_docs: true}, then ur result will contain
+ * all fields of docs, not just the value u specified in emit.
+ * BUT u still have to emit a value in mapper.
  */
 
 ddoc = {
